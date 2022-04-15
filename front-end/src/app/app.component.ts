@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // rotear as chamadas do menu...
+//import { environment } from 'src/environments/environment'; // configurações externas
+//import { AuthService } from './shared/services/auth.service'; // se precisarmos de autenticação mais tarde...
 
-@Component({
+@Component({ //metadata
   selector: 'app-root',
+  templateUrl: './app.component.html',
+  /*
   template: `
     <!--The content below is only a placeholder and can be replaced.-->
     <div style="text-align:center" class="content">
@@ -25,8 +30,33 @@ import { Component } from '@angular/core';
     </ul>
     <router-outlet></router-outlet>
   `,
-  styles: []
+  */
+  styles: []  
 })
 export class AppComponent {
-  title = 'modsisApp';
+  title = 'The modsis App';
+  //userInfo = 'unauthenticated';
+
+  // Configurações iniciais...
+  showMenu: boolean = true;//showMenu: boolean = false; Pois "em tese", você só mostra algumas opções de menu depois de autenticado...
+  //public static environmentName = environment.environmentName;;  
+
+  // Links do menu...
+  links = [    
+    { path: '/home', icon: 'home', title: 'Home' },
+    { path: '/tests', icon: 'public', title: 'Simple Tests' }
+  ];
+
+  // Construtor da App...
+  constructor(/*public authAWSome: AuthService,*/
+    private router: Router) { // in order to navigate using code instead of UI/navigation-bar
+    
+    }
+
+  // Exemplo de método...
+  public login() {
+    console.log("*** Logar Usuário ***");
+    this.router.navigateByUrl("/login");
+  }
 }
+//-------------------------

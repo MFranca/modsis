@@ -25,3 +25,73 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Fazendo os Ajustes do Layout
+
+### Adicionando Componentes (layout)
+
+```
+npm i @angular/cdk
+npm i @angular/material
+```
+
+### Editar arquivos:
+
+index.html - estilos
+
+styles.scss - estilos
+
+app\app.module.ts - localização, componentes, módulos, serviços e internacionalização
+
+app\app.component.ts - layout com menu lateral
+
+app\app-routing.module.ts - links de navegação
+
+### Criar sub-pastas
+
+app\components
+
+app\components\home
+
+app\components\tests
+
+app\guards
+
+app\shared
+
+### Criar arquivos:
+
+app\material.module.ts
+
+app\app.component.html
+
+app\components\home\home.component.ts
+
+app\components\home\home.component.html
+
+### Copiar imagens para a pasta: assets
+
+Vamos compilar tudo pra garantir que está tudo funcionando...
+
+`ng build`
+
+```
+λ ng build
+√ Browser application bundle generation complete.
+√ Copying assets complete.
+√ Index html generation complete.
+
+Initial Chunk Files           | Names         |  Raw Size | Estimated Transfer Size
+main.c52bbae0408a7254.js      | main          | 433.66 kB |               102.59 kB
+polyfills.809916caf2dec869.js | polyfills     |  33.02 kB |                10.67 kB
+styles.6afb6185820e8e4f.css   | styles        |   4.58 kB |                 1.17 kB
+runtime.8b7065e707a673b2.js   | runtime       |   1.04 kB |               597 bytes
+
+                              | Initial Total | 472.30 kB |               115.01 kB
+
+Build at: 2022-04-15T15:49:36.705Z - Hash: 18ca2a5dd657d8de - Time: 28287ms
+```
+
+Agora podemos testar no navegador...
+
+`ng serve --open`

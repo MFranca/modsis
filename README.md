@@ -95,3 +95,27 @@ Criar diretorio "front-end" dentro do repositório Git.
 (O site estará disponível em `http://localhost:4200/`)
 
 Parabéns, você concluiu com sucesso o setup de um ambiente de desenvolvimento front-end Angular!
+
+#### Outra Opção (para testar o ambiente):
+
+a) Fazer o clone ou baixar este repositório como um arquivo .zip, descompactá-lo;
+
+b) No terminal (promtp de comando), entrar no diretório `front-end`;
+
+`npm install`
+
+`ng serve --open`
+
+Você deve receber uma mensagem como esta abaixo: 
+
+```
+Build at: 2022-04-15T14:14:55.917Z - Hash: 0f971024622bbf52 - Time: 21104ms
+                                        
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+  
+√ Compiled successfully.                                                                                           
+```
+
+(O site estará disponível em `http://localhost:4200/`)
+
+Parabéns, você concluiu com sucesso o setup de um ambiente de desenvolvimento front-end Angular!
