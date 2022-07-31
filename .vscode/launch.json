@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ModsisBackendApplication<modsis-backend>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.pro.franca.modsisbackend.ModsisBackendApplication",
+            "projectName": "modsis-backend",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
